@@ -11,3 +11,12 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo "hello world 🗺️"
+      
+      - name: Hello world action step
+        id: hello
+        uses: bekahwhittle/hello-world-action-js@v1.2
+        with:
+          who-to-greet: 'Mona the Octocat'
+
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
