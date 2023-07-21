@@ -14,7 +14,7 @@ jobs:
       
       - name: Hello world action step
         id: hello
-        uses: bekahwhittle/hello-world-action-js@v1.1
+        uses: bekahwhittle/hello-world-action-js@1.0
         with:
           who-to-greet: 'Mona the Octocat'
 
