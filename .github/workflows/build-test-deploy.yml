@@ -47,9 +47,7 @@ jobs:
 
     # Specify runner + deployment step
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      
+
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
