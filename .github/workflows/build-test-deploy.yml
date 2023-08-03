@@ -9,6 +9,7 @@ jobs:
     steps: 
       - name: checkout repo
         uses: actions/checkout@v3
+
       - name: use node.js
         uses: actions/setup-node@v3
         with:
@@ -24,6 +25,7 @@ jobs:
     steps: 
       - name: checkout repo
         uses: actions/checkout@v3
+        
       - name: use node.js
         uses: actions/setup-node@v3
         with:
@@ -31,7 +33,6 @@ jobs:
       - run: npm install
       - run: npm test
  
-      # Deploy job
   deploy:
     needs: test
 
@@ -39,7 +40,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    # Specify runner + deployment step
     runs-on: ubuntu-latest
 
     steps:
