@@ -51,7 +51,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: use node.js
         uses: actions/setup-node@v3
