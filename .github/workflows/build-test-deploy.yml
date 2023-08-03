@@ -51,6 +51,13 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
 
+      - name: use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm install
+      - run: npm run build --if-present
+      
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
