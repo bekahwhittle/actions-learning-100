@@ -72,10 +72,10 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
         with: 
-          path: ./pages
+          path: "./pages"
 
       - name: Deploy
-        id: Deployment
+        id: deployment
         uses: actions/deploy-pages@v1
 
 
