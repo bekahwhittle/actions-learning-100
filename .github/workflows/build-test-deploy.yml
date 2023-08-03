@@ -30,3 +30,8 @@ jobs:
           node-version: '18.x'
       - run: npm install
       - run: npm test
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: pages # The folder the action should deploy. 
+
