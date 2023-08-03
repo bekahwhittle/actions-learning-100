@@ -37,6 +37,11 @@ jobs:
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
+      deployments: write
+      contents: write
+      statuses: write
+      actions: write
+      checks: read
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
 
@@ -52,7 +57,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: use node.js
         uses: actions/setup-node@v3
@@ -67,6 +72,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           repository: https://github.com/bekahwhittle/actions-learning-100.git
           folder: . # The folder the action should deploy.
