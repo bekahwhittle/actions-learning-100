@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository code
       - run: echo "hello world 🗺️"
       
       - name: Hello world action step
