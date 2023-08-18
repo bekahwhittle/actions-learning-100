@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "hello world 🗺️"
+      - run: echo "$(cat hello_world.txt)hello world"
       
       - name: Hello world action step
         id: hello
