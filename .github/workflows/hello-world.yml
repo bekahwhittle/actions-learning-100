@@ -9,7 +9,6 @@ jobs:
 
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
       - run: echo "hello world 🗺️"
       
       - name: Hello world action step
